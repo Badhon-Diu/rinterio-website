@@ -1,0 +1,899 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rinterio</title>
+    <link rel="shortcut icon" href="./assets/icon.svg" type="image/x-icon" />
+    <!-- Google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/d0e17ced7d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- daisy ui + tailwind css link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- configuration tailwind css style -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#737373",
+            },
+            fontFamily: {
+              manropeFont: "Manrope",
+            },
+            backgroundImage: {
+              imageOne: "url('./assets/bg.jpg')",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-manropeFont">
+    <header
+      class="bg-gradient-to-r from-[#ffffff00] to-[rgb(255,255,255)] manrope"
+    >
+      <nav class="navigation-bar-styles pt-10 md:w-10/12 w-full mx-auto">
+        <div class="navbar justify-between mb-10">
+          <div
+            class="navbar-start inline-flex md:justify-normal justify-around md:gap-3 gap-1 items-center"
+          >
+            <div
+              class="bg-[#ABEF5F] text-black w-8 h-8 rounded-full flex justify-center items-center"
+            >
+              <i class="fa-solid fa-arrow-right -rotate-45"></i>
+            </div>
+            <a class="font-extrabold text-3xl">Rinterio</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-[#494949]">
+              <li><a class="text-lg font-extrabold">Home</a></li>
+              <li><a class="text-lg">Services</a></li>
+              <li><a class="text-lg">Portfolio</a></li>
+              <li><a class="text-lg">Blogs</a></li>
+              <li><a class="text-lg">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end hidden md:flex gap-4">
+            <div
+              class="bg-white border border-solid border-[#E9E9E9] rounded-full w-12 h-12 inline-flex items-center justify-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+            </div>
+            <div
+              class="bg-white border border-solid border-[#E9E9E9] rounded-full w-12 h-12 inline-flex items-center justify-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                />
+              </svg>
+            </div>
+            <div
+              class="bg-[#ABEF5F] py-3 px-5 flex items-center gap-3 rounded-[32px]"
+            >
+              <a class="text-xl font-extrabold">Book Consult</a>
+              <i
+                class="fa-solid fa-arrow-right -rotate-45 bg-black text-white w-8 h-8 rounded-full flex justify-center items-center"
+              ></i>
+            </div>
+          </div>
+          <div class="dropdown">
+            <div
+              tabindex="0"
+              role="button"
+              class="btn btn-ghost lg:hidden bg-white border border-solid border-[#E9E9E9] rounded-full"
+            >
+              <i class="fa-solid fa-bars text-[#737373]"></i>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow right-0 bg-white"
+            >
+              <li><a>Home</a></li>
+              <li><a>Services</a></li>
+              <li><a>Portfolio</a></li>
+              <li><a>Blogs</a></li>
+              <li><a>Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section class="banner-container md:w-10/12 w-full mx-auto">
+        <div class="hero">
+          <div
+            class="hero-content text-center flex-col justify-center items-center"
+          >
+            <div class="">
+              <div class="flex justify-center items-center">
+                <img src="./assets/banner.png" alt="" />
+              </div>
+              <h1
+                class="lg:text-6xl md:text-4xl text-3xl font-extrabold md:w-4/5 w-full text-center mx-auto mt-4"
+              >
+                A barn house of this design has a striking appearance
+              </h1>
+              <p
+                class="py-8 text-[#494949] md:text-lg text-sm md:w-4/5 w-full mx-auto text-center"
+              >
+                The cottage exudes a perfect balance of cozy tradition and
+                contemporary flair, boasting distressed timber, polished metal
+                finishes, and expansive windows that fill the space with an
+                abundance of daylight.
+              </p>
+              <div
+                class="bg-[rgba(172,239,95,0.5)] py-3 px-5 flex items-center gap-3 rounded-[32px] md:w-52 w-full text-center mx-auto justify-center mb-20"
+              >
+                <a class="text-xl font-semibold">View Details</a>
+                <i
+                  class="fa-solid fa-arrow-right -rotate-45 text-black bg-[#ABEF5F] w-8 h-8 rounded-full flex justify-center items-center"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main class="bg-[#f4f4f4] w-full">
+      <!-- residential section -->
+      <section class="residential-container">
+        <div class="lg:p-24">
+          <div class="flex md:w-10/12 mx-auto w-full flex-col lg:flex-row">
+            <div class="card grid flex-grow p-5 flex-1">
+              <div class="md:text-left text-center">
+                <div class="absolute -left-6 -top-10 hidden md:block">
+                  <img src="./assets/Vector.png" alt="" />
+                </div>
+                <div
+                  class="inline-flex items-center bg-white px-5 md:mb-10 gap-3 py-3 rounded-3xl"
+                >
+                  <div class="text-black">
+                    <i
+                      class="fa-solid fa-arrow-right font-bold text-[#494949]"
+                    ></i>
+                  </div>
+                  <p class="font-bold text-[#494949]">About Us</p>
+                </div>
+                <h3
+                  class="md:text-5xl text-2xl md:mt-0 mt-5 font-extrabold w-full"
+                >
+                  We design thoughtful, liveable spaces
+                </h3>
+                <p
+                  class="md:w-4/5 text-sm md:text-lg w-full text-[#494949] py-5"
+                >
+                  We craft environments that blend aesthetics with practicality,
+                  ensuring each space feels both inviting and purposeful.
+                </p>
+              </div>
+              <div
+                class="bg-white flex gap-5 md:p-6 px-3 pt-5 rounded-2xl mb-5"
+              >
+                <div>
+                  <img src="./assets/commercial.png" alt="" />
+                </div>
+                <div class="md:w-4/5 w-full">
+                  <h3 class="text-lg font-extrabold">Commercial</h3>
+                  <p class="text-sm md:text-lg mt-2 text-[#737373] pb-4">
+                    We design thoughtful, livable spaces that blend
+                    functionality and elegance, perfect for both residential
+                    comfort and commercial success.
+                  </p>
+                </div>
+              </div>
+              <div class="bg-white flex gap-5 md:p-6 px-3 pt-5 rounded-2xl">
+                <div>
+                  <img src="./assets/residential.png" alt="" />
+                </div>
+                <div class="md:w-4/5 w-full">
+                  <h3 class="text-lg font-extrabold">Residential</h3>
+                  <p class="text-sm md:text-lg mt-2 text-[#737373] pb-4">
+                    Our designs create inviting, functional homes that blend
+                    thoughtful details with modern comfort, featuring
+                    well-planned layouts and stylish finishes.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card rounded-box grid flex-grow p-5 flex-1">
+              <img class="w-full" src="./assets/Rectangle.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- client management section -->
+      <section class="client-management">
+        <div class="md:w-10/12 mx-auto lg:px-20 px-5 md:my-24 my-8">
+          <div
+            class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 bg-white rounded-2xl p-4"
+          >
+            <div
+              class="text-center flex flex-col m-8 justify-center items-center"
+            >
+              <img src="./assets/comment-01.png" alt="" />
+              <span class="text-3xl text-[#494949] font-extrabold pt-4"
+                >235+</span
+              >
+              <h3 class="text-[#737373] font-medium pt-1 pb-4">
+                Happy Client Review
+              </h3>
+            </div>
+            <div class="text-center flex flex-col justify-center items-center">
+              <img src="./assets/departement.png" alt="" />
+              <span class="text-3xl text-[#494949] font-extrabold pt-4"
+                >50+</span
+              >
+              <h3 class="text-[#737373] font-medium pt-1 pb-4">
+                Work Departments
+              </h3>
+            </div>
+            <div class="text-center flex flex-col justify-center items-center">
+              <img src="./assets/user-group.png" alt="" />
+              <span class="text-3xl text-[#494949] font-extrabold pt-4"
+                >30k+</span
+              >
+              <h3 class="text-[#737373] font-medium pt-1 pb-4">
+                Our Happy Client
+              </h3>
+            </div>
+            <div class="text-center flex flex-col justify-center items-center">
+              <img src="./assets/user-multiple.png" alt="" />
+              <span class="text-3xl text-[#494949] font-extrabold pt-4"
+                >307+</span
+              >
+              <h3 class="text-[#737373] font-medium pt-1 pb-4">
+                Staff Members
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- work progress section -->
+      <section class="work-process-grid-layout">
+        <div class="md:w-10/12 w-full mx-auto text-center">
+          <div
+            class="inline-flex items-center bg-white px-5 md:mb-10 mb-5 gap-3 py-3 rounded-3xl"
+          >
+            <div class="text-[#494949]">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <p class="font-bold text-[#494949]">How we works</p>
+          </div>
+          <h3 class="md:text-5xl text-2xl font-extrabold mb-4 px-5">
+            Our Works Process
+          </h3>
+          <p
+            class="lg:w-2/5 md:w-full w-full mx-auto text-center text-[#494949] mb-6 px-5"
+          >
+            The loft impresses with its mix of industrial edge and contemporary
+            style, showcasing exposed brick, polished concrete floors, and
+            modern fixtures.
+          </p>
+          <div
+            class="grid-layout-content grid lg:grid-cols-4 md:grid-cols-2 gap-6 lg:px-20 px-5"
+          >
+            <div class="text-left bg-[#E7C1D3] rounded-2xl p-6">
+              <div>
+                <img src="./assets/concept.png" alt="" />
+              </div>
+              <h3 class="text-lg font-extrabold mt-3">Concept</h3>
+              <p class="text-[#494949] w-full py-2">
+                Preliminary Sketches: We create initial sketches and
+                visualizations to explore different design directions and
+                solutions.
+              </p>
+            </div>
+            <div class="text-left bg-[#EFDA6E] rounded-2xl p-6">
+              <div>
+                <img src="./assets/flow-chart.png" alt="" />
+              </div>
+              <h3 class="text-lg font-extrabold mt-3">Design Process</h3>
+              <p class="text-[#494949] w-full py-2">
+                Our team conducts thorough research and analysis to gather
+                insights, identify opportunities, and define project parameters.
+              </p>
+            </div>
+            <div class="text-left bg-[#A4DAC3] rounded-2xl p-6">
+              <div>
+                <img src="./assets/vision.png" alt="" />
+              </div>
+              <h3 class="text-lg font-extrabold mt-3">Supervision</h3>
+              <p class="text-[#494949] w-full py-2">
+                Detail how your team ensures that every step of the process is
+                monitored for quality and adherence to standards.
+              </p>
+            </div>
+            <div class="text-left bg-[#77AAEA] rounded-2xl p-6">
+              <div>
+                <img src="./assets/budget-planning.png" alt="" />
+              </div>
+              <h3 class="text-lg font-extrabold mt-3">Budget Planning</h3>
+              <p class="text-[#494949] w-full py-2">
+                Provide a detailed estimate of all potential costs, including
+                design, materials, labor, and any additional expenses.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- challenge section -->
+      <section class="challenge-container-grid my-20 md:bg-white">
+        <div class="md:w-10/12 w-full mx-auto px-5">
+          <div class="text-part text-center">
+            <!-- arrow section -->
+            <div
+              class="inline-flex items-center bg-[rgba(172,239,95,0.21)] px-5 md:mb-10 gap-3 py-3 rounded-3xl md:my-20 my-10"
+            >
+              <div class="text-black">
+                <i class="fa-solid fa-arrow-right text-[#494949]"></i>
+              </div>
+              <p class="font-bold text-[#494949]">Explore our Latest works</p>
+            </div>
+            <!-- arrow end -->
+            <h3 class="md:text-5xl text-2xl font-bold mb-4">
+              Our Latest Portfolio
+            </h3>
+            <p class="md:w-2/5 w-full mx-auto text-center text-[#494949] pb-6">
+              Explore our latest portfolio of exceptional properties, each
+              offering unique features and prime locations. From modern luxury
+              to charming residences, find your ideal home today and start a new
+              chapter in your life.
+            </p>
+          </div>
+          <div
+            class="grid-section grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 lg:px-20 md:px-8 md:pb-32 pb-10"
+          >
+            <!-- card  0 -->
+            <div
+              class="card card-side lg:col-span-3 md:col-span-2 col-span-1 md:flex-row flex-col bg-white md:px-8 md:p-4 p-4 border border-solid border-[#E9E9E9] items-center gap-x-5"
+            >
+              <figure class="md:h-[160px] md:w-[437px] rounded-xl">
+                <img
+                  class="w-full object-cover"
+                  src="./assets/img1.png"
+                  alt="Movie"
+                />
+              </figure>
+              <div class="card-body p-0">
+                <h2 class="card-title md:text-2xl text-xl font-bold">
+                  Commercial
+                </h2>
+                <p class="text-[#494949] md:text-lg text-sm lg:w-2/3 w-full">
+                  Explore our commercial portfolio with prime spaces in
+                  strategic locations, perfect for businesses of all sizes.
+                </p>
+                <div
+                  class="inline-flex items-center gap-3 rounded-[32px] md:w-56"
+                >
+                  <a class="md:text-xl text-lg font-extrabold cursor-pointer"
+                    >View Details</a
+                  >
+                  <i
+                    class="fa-solid fa-arrow-right -rotate-45 bg-[#ABEF5F] text-black w-8 h-8 rounded-full flex justify-center items-center"
+                  ></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- card -2 -->
+            <div
+              class="card md:px-4 md:p-0 p-4 justify-center items-center border border-solid border-[#E9E9E9] bg-white"
+            >
+              <figure class="">
+                <img src="./assets/img2.png" alt="" />
+              </figure>
+            </div>
+            <!-- card -3 -->
+            <div
+              class="card md:px-4 md:p-0 p-4 justify-center items-center border border-solid border-[#E9E9E9] bg-white hidden sm:grid"
+            >
+              <div class="md:h-[160px] md:w-[290px] rounded-xl">
+                <img
+                  class="rounded-lg object-cover"
+                  src="./assets/img3.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <!-- tricky question -->
+            <div
+              class="card md:px-4 md:p-0 p-4 justify-center items-center border border-solid border-[#E9E9E9] bg-white md:hidden lg:hidden"
+            >
+              <figure class="md:h-[160px] md:w-[255px] rounded-xl">
+                <img
+                  class="w-full object-cover"
+                  src="./assets/img5.png"
+                  alt=""
+                />
+              </figure>
+            </div>
+            <!-- end -->
+            <div
+              class="card card-side bg-white md:col-span-2 col-span-1 gap-4 md:flex-row flex-col md:p-4 p-4 border border-solid border-[#E9E9E9] items-center"
+            >
+              <figure class="md:h-[160px] md:w-[437px] rounded-xl">
+                <img class="w-full" src="./assets/img4.png" alt="" />
+              </figure>
+              <div class="card-body p-1">
+                <h2 class="card-title md:text-2xl text-xl font-bold">
+                  Residential
+                </h2>
+                <p class="text-[#494949] md:text-lg text-sm">
+                  Our latest portfolio offers homes, from urban apartments to
+                  suburban villas, in prime locations.
+                </p>
+                <div
+                  class="inline-flex items-center gap-3 rounded-[32px] md:w-56"
+                >
+                  <a class="md:text-xl text-sm font-extrabold cursor-pointer"
+                    >View Details</a
+                  >
+                  <i
+                    class="fa-solid fa-arrow-right -rotate-45 bg-[#ABEF5F] text-black w-8 h-8 rounded-full flex justify-center items-center"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <!-- card - 5 -->
+            <div
+              class="card md:p-0 p-4 justify-center items-center border border-solid border-[#E9E9E9] bg-white hidden lg:grid"
+            >
+              <figure class="md:h-[160px] md:w-[290px] rounded-xl">
+                <img class="w-full" src="./assets/img5.png" alt="" />
+              </figure>
+            </div>
+            <!-- again tricky -->
+            <div
+              class="card md:px-4 md:p-0 p-4 justify-center items-center border border-solid border-[#E9E9E9] bg-white md:border-hidden lg:border-hidden"
+            >
+              <figure class="">
+                <img
+                  class="md:hidden lg:hidden w-full"
+                  src="./assets/img3.png"
+                  alt=""
+                />
+              </figure>
+            </div>
+            <!-- again tricky end -->
+            <!-- hidden all large device and mobile device on -->
+            <div
+              class="card md:px-4 md:p-0 p-4 justify-center items-center border border-solid border-[#E9E9E9] bg-white md:border-hidden lg:border-hidden"
+            >
+              <figure>
+                <img
+                  class="md:hidden lg:hidden w-full"
+                  src="./assets/img5.png"
+                  alt=""
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- creative section styles (inspired form a website) -->
+      <section class="creative-sction w-full mt-10 pb-16">
+        <div class="md:w-10/12 mx-auto w-full md:px-16 px-4">
+          <div class="text-part md:text-left text-center">
+            <h3 class="md:text-4xl text-2xl font-extrabold my-4">
+              Discover how we can help
+            </h3>
+            <div
+              class="btn-content flex items-center gap-4 mb-5 md:justify-start justify-center"
+            >
+              <button
+                class="text-lg font-bold px-5 py-3 rounded-full bg-black text-white"
+                href="#"
+              >
+                Buying
+              </button>
+              <button
+                class="text-lg font-bold px-4 py-3 rounded-full text-black border hover:text-white hover:bg-black border-solid border-black hidden md:flex"
+                href="#"
+              >
+                Renting
+              </button>
+              <button
+                class="text-lg font-bold px-4 py-3 rounded-full text-black border hover:text-white hover:bg-black border-solid border-black"
+                href="#"
+              >
+                Selling
+              </button>
+            </div>
+          </div>
+          <div class="flex lg:flex-row flex-col my-6 items-center gap-4">
+            <div
+              class="card border border-solid border-gray-500 text-primary-content w-full text-black bg-white flex-1"
+            >
+              <div class="card-body px-4 py-4">
+                <div class="flex items-center justify-between">
+                  <h2 class="card-title md:text-xl text-lg font-bold">
+                    Find out how much you can afford
+                  </h2>
+                  <svg
+                    class="w-12"
+                    xmlns="http://www.w3.org/2000/svg"
+                    data-testid="spot-badge-cash-reward"
+                    viewBox="0 0 48 48"
+                  >
+                    <path
+                      fill="#D92228"
+                      d="M21.024 5.374c1.428-2.1 4.524-2.1 5.952 0l2.255 3.314 3.84-1.408c2.43-.892 4.98.998 4.833 3.584l-.209 3.673 3.688.933c2.587.655 3.587 3.8 1.853 5.828L40.93 24l2.307 2.701c1.734 2.03.734 5.174-1.853 5.829l-3.688.933.21 3.673c.146 2.586-2.404 4.476-4.835 3.584l-3.839-1.408-2.255 3.314c-1.428 2.1-4.524 2.1-5.952 0l-2.255-3.314-3.839 1.408c-2.431.892-4.98-.998-4.834-3.584l.209-3.673-3.688-.933c-2.587-.655-3.587-3.8-1.853-5.829L7.072 24l-2.308-2.702C3.03 19.27 4.03 16.125 6.617 15.47l3.688-.933-.209-3.673c-.147-2.586 2.403-4.476 4.834-3.584l3.839 1.408 2.255-3.314Z"
+                    />
+                    <circle cx="24" cy="24" r="12" fill="#fff" />
+                    <path
+                      fill="#620F12"
+                      fill-rule="evenodd"
+                      d="M24 15a1 1 0 0 1 1 1v1.053c1.149.125 2.205.461 3.05.968C29.115 18.661 30 19.682 30 21a1 1 0 1 1-2 0c0-.34-.234-.817-.979-1.264-.52-.312-1.215-.555-2.021-.668v3.968a9.22 9.22 0 0 1 2.075.387c.667.216 1.392.564 1.959 1.143.591.604.966 1.416.966 2.434 0 1.018-.375 1.83-.966 2.434-.567.58-1.292.927-1.959 1.143a9.22 9.22 0 0 1-2.075.387V32a1 1 0 1 1-2 0v-1.053c-1.149-.125-2.205-.461-3.05-.968C18.885 29.339 18 28.318 18 27a1 1 0 1 1 2 0c0 .34.234.817.979 1.264.52.312 1.215.555 2.021.668v-3.968a9.22 9.22 0 0 1-2.075-.387c-.667-.216-1.392-.564-1.959-1.143C18.375 22.83 18 22.018 18 21c0-1.018.375-1.83.966-2.434.567-.58 1.292-.927 1.959-1.143A9.22 9.22 0 0 1 23 17.036V16a1 1 0 0 1 1-1Zm-1 4.044a6.948 6.948 0 0 0-1.46.283c-.494.16-.886.374-1.145.638-.234.24-.395.553-.395 1.035 0 .482.161.795.395 1.035.26.264.65.479 1.145.638a6.95 6.95 0 0 0 1.46.284v-3.913Zm2 6v3.912a6.948 6.948 0 0 0 1.46-.283c.494-.16.886-.374 1.145-.638.234-.24.395-.553.395-1.035 0-.482-.161-.795-.395-1.035-.26-.264-.65-.479-1.145-.638a6.948 6.948 0 0 0-1.46-.284Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <p class="py-5 text-[#494949] md:text-lg text-sm">
+                  We'll assist you in estimating your budget range. Save this
+                  information to your buyer profile to aid in your search.
+                </p>
+                <div
+                  class="py-3 inline-flex items-center gap-3 rounded-[32px] md:w-56"
+                >
+                  <a class="text-xl font-extrabold cursor-pointer">See more</a>
+                  <i
+                    class="fa-solid fa-arrow-right -rotate-45 bg-[#ABEF5F] text-black w-8 h-8 rounded-full flex justify-center items-center"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card border border-solid border-gray-500 text-primary-content w-full text-black bg-white flex-1"
+            >
+              <div class="card-body px-4 py-4">
+                <div class="flex items-center justify-between">
+                  <h2 class="card-title md:text-xl text-lg font-bold">
+                    Understand your monthly costs
+                  </h2>
+                  <svg
+                    class="w-12"
+                    xmlns="http://www.w3.org/2000/svg"
+                    data-testid="spot-calculator"
+                    viewBox="0 0 48 48"
+                  >
+                    <path
+                      fill="#D92228"
+                      d="M8 5a3 3 0 0 1 3-3h26a3 3 0 0 1 3 3v38a3 3 0 0 1-3 3H11a3 3 0 0 1-3-3V5Z"
+                    />
+                    <circle cx="15" cy="21" r="2" fill="#fff" />
+                    <circle cx="15" cy="30" r="2" fill="#fff" />
+                    <circle cx="24" cy="21" r="2" fill="#fff" />
+                    <circle cx="24" cy="30" r="2" fill="#fff" />
+                    <circle cx="33" cy="21" r="2" fill="#fff" />
+                    <circle cx="33" cy="30" r="2" fill="#fff" />
+                    <circle cx="33" cy="39" r="2" fill="#fff" />
+                    <rect
+                      width="15"
+                      height="4"
+                      x="12"
+                      y="37"
+                      fill="#fff"
+                      rx="2"
+                    />
+                    <path
+                      fill="#fff"
+                      d="M12 8.4A2.4 2.4 0 0 1 14.4 6h19.2A2.4 2.4 0 0 1 36 8.4v4.2a2.4 2.4 0 0 1-2.4 2.4H14.4a2.4 2.4 0 0 1-2.4-2.4V8.4Z"
+                    />
+                  </svg>
+                </div>
+                <p class="py-5 md:text-lg text-sm text-[#494949]">
+                  Get an in-depth look at what your monthly and closing costs
+                  will look like based on your financial situation.
+                </p>
+                <div
+                  class="py-3 inline-flex items-center gap-3 rounded-[32px] md:w-56"
+                >
+                  <a class="text-xl font-extrabold cursor-pointer">See more</a>
+                  <i
+                    class="fa-solid fa-arrow-right -rotate-45 bg-[#ABEF5F] text-black w-8 h-8 rounded-full flex justify-center items-center"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card border border-solid border-gray-500 text-primary-content w-full text-black bg-white flex-1"
+            >
+              <div class="card-body px-4 py-4">
+                <div class="flex items-center justify-between">
+                  <h2 class="card-title md:text-xl text-lg font-bold">
+                    Get help with your down payment
+                  </h2>
+                  <svg
+                    class="w-12"
+                    xmlns="http://www.w3.org/2000/svg"
+                    data-testid="spot-money-stack"
+                    viewBox="0 0 48 48"
+                  >
+                    <path
+                      fill="#D92228"
+                      d="M10 39.95v-19.9c0-.58.47-1.05 1.05-1.05h34.9c.58 0 1.05.47 1.05 1.05v19.9c0 .58-.47 1.05-1.05 1.05h-34.9c-.58 0-1.05-.47-1.05-1.05Z"
+                    />
+                    <path
+                      fill="#fff"
+                      d="M35 30c0 4.418-2.91 8-6.5 8S22 34.418 22 30s2.91-8 6.5-8 6.5 3.582 6.5 8Z"
+                    />
+                    <path
+                      fill="#620F12"
+                      fill-rule="evenodd"
+                      d="M28.5 24a1 1 0 0 1 1 1v.07c.732.106 1.41.327 1.971.648C32.253 26.164 33 26.934 33 28a1 1 0 1 1-2 0c0-.038-.036-.269-.521-.546a3.395 3.395 0 0 0-.979-.354v1.95c.373.04.806.113 1.232.244.487.15 1.043.4 1.489.833.472.46.779 1.09.779 1.873 0 .784-.307 1.413-.78 1.873-.445.433-1 .683-1.488.833a6.83 6.83 0 0 1-1.232.244V35a1 1 0 1 1-2 0v-.07c-.732-.106-1.41-.327-1.971-.648C24.747 33.837 24 33.066 24 32a1 1 0 1 1 2 0c0 .039.036.269.521.546.257.147.59.272.979.354v-1.95a6.682 6.682 0 0 1-1.232-.244c-.487-.15-1.043-.4-1.489-.833A2.548 2.548 0 0 1 24 28c0-.784.307-1.413.78-1.873.445-.433 1-.683 1.488-.833a6.83 6.83 0 0 1 1.232-.244V25a1 1 0 0 1 1-1Zm-1 3.066a4.28 4.28 0 0 0-.643.14c-.325.1-.55.225-.683.355A.553.553 0 0 0 26 28c0 .216.068.337.174.44.133.129.358.254.683.354.212.066.433.11.643.14v-1.869Zm2 4v1.869a4.3 4.3 0 0 0 .643-.14c.325-.1.55-.226.683-.355A.553.553 0 0 0 31 32a.553.553 0 0 0-.174-.44c-.133-.129-.358-.254-.683-.354a4.3 4.3 0 0 0-.643-.14Z"
+                      clip-rule="evenodd"
+                    />
+                    <path
+                      fill="#fff"
+                      d="M18 29.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm26 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM16 41h-5a1 1 0 0 1-1-1v-5c2.549 0 6 3.451 6 6Zm25-22h5a1 1 0 0 1 1 1v5c-2.549 0-6-3.451-6-6Zm-31 6v-5a1 1 0 0 1 1-1h5c0 2.549-3.451 6-6 6Zm37 10v5a1 1 0 0 1-1 1h-5c0-2.549 3.451-6 6-6Z"
+                    />
+                    <path
+                      fill="#620F12"
+                      fill-rule="evenodd"
+                      d="M16.498 39c-.852-1.828-2.67-3.646-4.498-4.498-.682-.318-1.365-.502-2-.502v6a1 1 0 0 0 1 1h6c0-.635-.184-1.318-.502-2Zm-2.297 0a8.29 8.29 0 0 0-1-1.201 8.29 8.29 0 0 0-1.201-1V39h2.201Zm26.301-18c.852 1.828 2.67 3.646 4.498 4.498.682.318 1.365.502 2 .502v-6a1 1 0 0 0-1-1h-6c0 .635.184 1.318.502 2Zm2.297 0c.265.39.597.798 1 1.201s.81.735 1.201 1V21h-2.201ZM12 24.428c1.373-.728 2.7-2.055 3.428-3.428.359-.678.572-1.367.572-2h-5a1 1 0 0 0-1 1v5c.633 0 1.322-.213 2-.572Zm0-2.396A7.202 7.202 0 0 0 13.032 21H12v1.032Zm33 12.47c-1.828.852-3.646 2.67-4.498 4.498-.318.682-.502 1.365-.502 2h6a1 1 0 0 0 1-1v-6c-.635 0-1.318.184-2 .502Zm0 2.297a8.29 8.29 0 0 0-1.201 1 8.29 8.29 0 0 0-1 1.201H45v-2.201Z"
+                      clip-rule="evenodd"
+                    />
+                    <path
+                      fill="#D92228"
+                      d="M6 33.95v-19.9c0-.58.47-1.05 1.05-1.05h34.9c.58 0 1.05.47 1.05 1.05v19.9c0 .58-.47 1.05-1.05 1.05H7.05C6.47 35 6 34.53 6 33.95Z"
+                    />
+                    <path
+                      fill="#fff"
+                      d="M31 24c0 4.418-2.91 8-6.5 8S18 28.418 18 24s2.91-8 6.5-8 6.5 3.582 6.5 8Z"
+                    />
+                    <path
+                      fill="#620F12"
+                      fill-rule="evenodd"
+                      d="M24.5 18a1 1 0 0 1 1 1v.07c.732.106 1.41.327 1.971.648C28.253 20.164 29 20.934 29 22a1 1 0 1 1-2 0c0-.038-.036-.269-.521-.546a3.395 3.395 0 0 0-.979-.354v1.95c.373.04.806.113 1.232.244.487.15 1.043.4 1.489.833.472.46.779 1.09.779 1.873 0 .784-.307 1.413-.78 1.873-.445.433-1 .683-1.488.833a6.83 6.83 0 0 1-1.232.244V29a1 1 0 1 1-2 0v-.07c-.732-.106-1.41-.327-1.971-.648C20.747 27.836 20 27.066 20 26a1 1 0 1 1 2 0c0 .039.036.269.521.546.257.147.59.272.979.354v-1.95a6.682 6.682 0 0 1-1.232-.244c-.487-.15-1.043-.4-1.489-.833A2.548 2.548 0 0 1 20 22c0-.784.307-1.413.78-1.873.445-.433 1-.683 1.488-.833a6.83 6.83 0 0 1 1.232-.244V19a1 1 0 0 1 1-1Zm-1 3.066a4.28 4.28 0 0 0-.643.14c-.325.1-.55.225-.683.355A.553.553 0 0 0 22 22c0 .216.068.337.174.44.133.129.358.254.683.354.212.066.433.11.643.14v-1.869Zm2 4v1.869a4.3 4.3 0 0 0 .643-.14c.325-.1.55-.226.683-.356A.553.553 0 0 0 27 26a.553.553 0 0 0-.174-.44c-.133-.129-.358-.254-.683-.354a4.3 4.3 0 0 0-.643-.14Z"
+                      clip-rule="evenodd"
+                    />
+                    <path
+                      fill="#fff"
+                      d="M14 23.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm26 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM12 35H7a1 1 0 0 1-1-1v-5c2.549 0 6 3.451 6 6Zm25-22h5a1 1 0 0 1 1 1v5c-2.549 0-6-3.451-6-6ZM6 19v-5a1 1 0 0 1 1-1h5c0 2.549-3.451 6-6 6Zm37 10v5a1 1 0 0 1-1 1h-5c0-2.549 3.451-6 6-6Z"
+                    />
+                    <path
+                      fill="#620F12"
+                      fill-rule="evenodd"
+                      d="M12.498 33c-.852-1.828-2.67-3.646-4.498-4.498C7.318 28.183 6.635 28 6 28v6a1 1 0 0 0 1 1h6c0-.635-.184-1.318-.502-2Zm-2.297 0a8.287 8.287 0 0 0-1-1.201 8.289 8.289 0 0 0-1.201-1V33h2.201Z"
+                      clip-rule="evenodd"
+                    />
+                    <path
+                      fill="#620F12"
+                      fill-rule="evenodd"
+                      d="M38 35H11v-2h27v2Zm-1.498-20c.852 1.828 2.67 3.646 4.498 4.498.682.318 1.365.502 2 .502v-6a1 1 0 0 0-1-1h-6c0 .635.184 1.318.502 2Zm2.297 0c.265.39.597.798 1 1.201s.81.735 1.201 1V15h-2.201ZM8 18.428c1.373-.728 2.7-2.055 3.428-3.428.359-.678.572-1.367.572-2H7a1 1 0 0 0-1 1v5c.633 0 1.322-.213 2-.572Zm0-2.396A7.205 7.205 0 0 0 9.032 15H8v1.032Z"
+                      clip-rule="evenodd"
+                    />
+                    <path
+                      fill="#620F12"
+                      fill-rule="evenodd"
+                      d="M41 28.502c-1.828.852-3.646 2.67-4.498 4.498-.318.682-.502 1.365-.502 2h6a1 1 0 0 0 1-1v-6c-.635 0-1.318.184-2 .502Zm0 2.297a8.29 8.29 0 0 0-1.201 1 8.29 8.29 0 0 0-1 1.201H41v-2.201Z"
+                      clip-rule="evenodd"
+                    />
+                    <path
+                      fill="#620F12"
+                      fill-rule="evenodd"
+                      d="M43 18v13h-2V18h2Z"
+                      clip-rule="evenodd"
+                    />
+                    <path
+                      fill="#D92228"
+                      d="M1 27.95V8.05C1 7.47 1.47 7 2.05 7h34.9c.58 0 1.05.47 1.05 1.05v19.9c0 .58-.47 1.05-1.05 1.05H2.05C1.47 29 1 28.53 1 27.95Z"
+                    />
+                    <path
+                      fill="#fff"
+                      d="M32 7h5a1 1 0 0 1 1 1v5c-2.549 0-6-3.451-6-6ZM9 17.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM32.5 20a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5ZM2 29h5c0-2.549-3.451-6-6-6v5a1 1 0 0 0 1 1ZM1 13V8a1 1 0 0 1 1-1h5c0 2.549-3.451 6-6 6Zm37 10v5a1 1 0 0 1-1 1h-5c0-2.549 3.451-6 6-6Zm-18.5 3c3.59 0 6.5-3.582 6.5-8s-2.91-8-6.5-8-6.5 3.582-6.5 8 2.91 8 6.5 8Z"
+                    />
+                    <path
+                      fill="#620F12"
+                      fill-rule="evenodd"
+                      d="M36 13.498c-1.828-.852-3.646-2.67-4.498-4.498C31.183 8.318 31 7.635 31 7h6a1 1 0 0 1 1 1v20a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-6c.635 0 1.318.184 2 .502 1.828.852 3.646 2.67 4.498 4.498h24.003c.853-1.828 2.67-3.646 4.499-4.498v-9.003Zm0 11.3V27h-2.201a8.29 8.29 0 0 1 1-1.201 8.29 8.29 0 0 1 1.201-1Zm-1.201-14.597a8.29 8.29 0 0 1-1-1.201H36v2.201a8.29 8.29 0 0 1-1.201-1ZM4.201 25.799c.403.403.735.81 1 1.201H3v-2.201c.39.265.798.597 1.201 1ZM3 13.498c1.828-.852 3.646-2.67 4.498-4.498C7.816 8.318 8 7.635 8 7H2a1 1 0 0 0-1 1v6c.635 0 1.318-.184 2-.502Zm0-2.297c.39-.265.798-.597 1.201-1s.735-.81 1-1.201H3v2.201Z"
+                      clip-rule="evenodd"
+                    />
+                    <path
+                      fill="#620F12"
+                      fill-rule="evenodd"
+                      d="M19.5 12a1 1 0 0 1 1 1v.07c.732.106 1.41.327 1.971.648C23.253 14.164 24 14.934 24 16a1 1 0 1 1-2 0c0-.039-.036-.269-.521-.546a3.395 3.395 0 0 0-.979-.354v1.95c.373.04.806.113 1.232.244.487.15 1.043.4 1.489.833.472.46.779 1.09.779 1.873 0 .784-.307 1.413-.78 1.873-.445.433-1 .683-1.488.833a6.83 6.83 0 0 1-1.232.244V23a1 1 0 1 1-2 0v-.07c-.732-.106-1.41-.327-1.971-.648C15.747 21.836 15 21.066 15 20a1 1 0 1 1 2 0c0 .039.036.269.521.546.257.147.59.272.979.354v-1.95a6.682 6.682 0 0 1-1.232-.244c-.487-.15-1.043-.4-1.489-.833A2.548 2.548 0 0 1 15 16c0-.784.307-1.413.78-1.873.445-.433 1-.683 1.488-.833a6.83 6.83 0 0 1 1.232-.244V13a1 1 0 0 1 1-1Zm-1 3.066a4.28 4.28 0 0 0-.643.14c-.325.1-.55.225-.683.354A.553.553 0 0 0 17 16c0 .216.068.337.174.44.133.129.358.254.683.354.212.066.433.11.643.14v-1.869Zm2 4v1.869a4.3 4.3 0 0 0 .643-.14c.325-.1.55-.226.683-.356A.553.553 0 0 0 22 20a.553.553 0 0 0-.174-.44c-.133-.129-.358-.254-.683-.354a4.3 4.3 0 0 0-.643-.14Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <p class="py-5 md:text-lg text-sm text-[#494949]">
+                  You might be able to buy a home with just 3.5% down. Down
+                  payment assistance programs can help you save.
+                </p>
+                <div
+                  class="py-3 inline-flex items-center gap-3 rounded-[32px] md:w-56"
+                >
+                  <a class="text-xl font-extrabold cursor-pointer">See more</a>
+                  <i
+                    class="fa-solid fa-arrow-right -rotate-45 bg-[#ABEF5F] text-black w-8 h-8 rounded-full flex justify-center items-center"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- contact form section -->
+      <section
+        class="bg-imageOne bg-center bg-cover w-full border-8 border-solid border-white"
+      >
+        <div class="bg-opacity-55 bg-white">
+          <div class="text-center">
+            <div
+              class="inline-flex items-center bg-[rgba(172,239,95,0.21)] px-5 md:my-10 gap-3 my-4 py-3 rounded-3xl"
+            >
+              <p>Let’s Connect</p>
+              <div class="text-black">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+            <h3 class="md:text-5xl text-3xl font-extrabold">
+              Let’s Discuss Next Project
+            </h3>
+            <p class="text-lg py-5 md:w-2/5 mx-auto">
+              Our design will offer a sleek, modern look with intuitive
+              navigation and high-quality images. Interactive elements will
+              enhance property browsing, making the experience both engaging and
+              enjoyable.
+            </p>
+          </div>
+          <div>
+            <div class="w-full md:w-3/5 mx-auto p-8 rounded-lg">
+              <form>
+                <div class="grid md:grid-cols-2 grid-cols-1 gap-5 mb-6">
+                  <div class="mb-4">
+                    <input
+                      type="text"
+                      id="name"
+                      placeholder="First Name *"
+                      class="mt-1 outline-none text-[#A0A0A0] w-full p-4 rounded-full bg-white"
+                    />
+                  </div>
+
+                  <div class="mb-4">
+                    <input
+                      type="text"
+                      id="email"
+                      placeholder="Last Name *"
+                      class="mt-1 outline-none text-[#A0A0A0] w-full p-4 rounded-full bg-white"
+                    />
+                  </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 grid-cols-1 gap-5 mb-5">
+                  <div class="mb-4">
+                    <input
+                      type="tel"
+                      id="phone"
+                      placeholder="Phone Number *"
+                      class="mt-1 outline-none text-[#A0A0A0] w-full p-4 rounded-full bg-white"
+                    />
+                  </div>
+
+                  <div class="mb-4">
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="Email Address *"
+                      class="mt-1 outline-none text-[#A0A0A0] w-full p-4 rounded-full bg-white"
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-4 h-2/4">
+                  <textarea
+                    name=""
+                    id=""
+                    placeholder="Write your message here"
+                    class="mt-1 outline-none text-[#A0A0A0] w-full p-5 rounded-2xl h-60 bg-white"
+                  ></textarea>
+                </div>
+
+                <div
+                  class="flex w-full items-center bg-[#ABEF5F] justify-center gap-5 py-2 rounded-full btn"
+                >
+                  <a
+                    class="text-black text-xl font-extrabold rounded-full hover:text-black"
+                    >Send Message</a
+                  >
+                  <span
+                    class="bg-black text-[#ABEF5F] w-8 h-8 rounded-full flex justify-center items-center"
+                  >
+                    <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer section -->
+    <footer
+      class="footer footer-center bg-[#1C1C1C] text-primary-content md:p-10 p-5"
+    >
+      <aside class="mt-20">
+        <div
+          class="navbar-start inline-flex md:justify-center mb-5 md:gap-3 gap-1 items-center"
+        >
+          <div
+            class="bg-[#ABEF5F] text-black w-8 h-8 rounded-full flex justify-center items-center"
+          >
+            <i class="fa-solid fa-arrow-right -rotate-45"></i>
+          </div>
+          <a class="font-extrabold text-white text-3xl">Rinterio</a>
+        </div>
+        <p
+          class="md:w-2/3 mx-auto md:text-lg text-[16px] leading-7 text-clifford"
+        >
+          Rinterio is a real estate company dedicated to offering exceptional
+          property solutions. Specializing in buying, selling, and renting, we
+          provide expert service and in-depth market knowledge to help clients
+          find their ideal properties.
+        </p>
+      </aside>
+      <div class="text-center text-[#E9E9E9]">
+        <ul
+          class="menu menu-horizontal px-1 text-[#494949] md:flex-row flex-col items-center justify-center"
+        >
+          <li><a class="text-[#E9E9E9] text-lg">Home</a></li>
+          <li><a class="text-[#E9E9E9] text-lg">Services</a></li>
+          <li><a class="text-[#E9E9E9] text-lg">Portfolio</a></li>
+          <li><a class="text-[#E9E9E9] text-lg">Blogs</a></li>
+          <li><a class="text-[#E9E9E9] text-lg">Contact Us</a></li>
+        </ul>
+      </div>
+      <nav>
+        <div class="grid grid-flow-col gap-4">
+          <a>
+            <button
+              class="bg-[#ABEF5F] py-3 px-5 flex items-center gap-3 rounded-[32px]"
+            >
+              <a class="text-xl font-extrabold text-black">Book Consult</a>
+              <i
+                class="fa-solid fa-arrow-right -rotate-45 bg-black text-white w-8 h-8 rounded-full flex justify-center items-center"
+              ></i>
+            </button>
+          </a>
+        </div>
+      </nav>
+    </footer>
+  </body>
+</html>
